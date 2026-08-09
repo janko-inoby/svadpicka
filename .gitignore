@@ -1,0 +1,6 @@
+/vendor/
+/.env
+/var/*.log
+/credentials/*.json
+.DS_Store
+

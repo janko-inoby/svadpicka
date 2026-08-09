@@ -1,0 +1,16 @@
+:root {
+  --svadpicka-green: #356447;
+  --svadpicka-cream: #f7f3e9;
+  --svadpicka-ink: #20241f;
+}
+
+body {
+  background: var(--svadpicka-cream);
+  color: var(--svadpicka-ink);
+}
+
+.btn-dark {
+  --bs-btn-bg: var(--svadpicka-green);
+  --bs-btn-border-color: var(--svadpicka-green);
+}
+

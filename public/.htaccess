@@ -1,0 +1,6 @@
+Options -Indexes
+RewriteEngine On
+
+RewriteRule ^p/([A-Za-z0-9_-]{16,128})/?$ index.php?token=$1 [L,QSA]
+RewriteRule ^api/rsvp/?$ api/rsvp.php [L,QSA]
+
