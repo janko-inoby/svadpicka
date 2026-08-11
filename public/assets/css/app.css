@@ -1,16 +1,561 @@
+@font-face {
+  font-family: "Golden Hopes";
+  src: url("/assets/fonts/golden-hopes.otf") format("opentype");
+  font-display: swap;
+}
+
 :root {
-  --svadpicka-green: #356447;
-  --svadpicka-cream: #f7f3e9;
-  --svadpicka-ink: #20241f;
+  --cream: #f7f4ed;
+  --cream-light: #faf8f3;
+  --cream-deep: #efebe1;
+  --sage-light: #e8e9d8;
+  --olive: #838746;
+  --olive-dark: #4b4f2f;
+  --olive-light: #a9ad6b;
+  --ink: #2d3028;
+  --muted: #67695f;
+  --line: #d9d6cc;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--svadpicka-cream);
-  color: var(--svadpicka-ink);
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Urbanist", sans-serif;
+  font-size: 15px;
+  line-height: 1.47;
 }
 
-.btn-dark {
-  --bs-btn-bg: var(--svadpicka-green);
-  --bs-btn-border-color: var(--svadpicka-green);
+a {
+  color: inherit;
+  text-underline-offset: 3px;
 }
 
+h1,
+h2,
+.footer-names {
+  margin: 0;
+  font-family: "Golden Hopes", cursive;
+  font-weight: 400;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 1.1;
+}
+
+h2,
+.footer-names {
+  font-size: 48px;
+}
+
+p {
+  margin: 0;
+}
+
+.section-pad {
+  position: relative;
+  overflow: hidden;
+  padding: 76px 0;
+}
+
+.working-title {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.hero {
+  padding-top: 96px;
+  padding-bottom: 88px;
+  background: var(--cream);
+}
+
+.hero-chateau {
+  display: block;
+  width: 440px;
+  height: 138px;
+  margin: 24px auto;
+  object-fit: contain;
+}
+
+.hero-copy {
+  color: var(--olive);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+.date-badge {
+  display: inline-flex;
+  margin-top: 32px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--sage-light);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.venue {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--olive);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.rsvp-intro {
+  background: var(--sage-light);
+}
+
+.section-illustration,
+.layered-icon {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.rsvp-illustration {
+  width: 84px;
+  height: 75px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-kicker {
+  margin-bottom: 24px;
+  color: var(--olive);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.rsvp-intro .section-kicker {
+  margin-bottom: 24px;
+}
+
+.rsvp-intro h2 {
+  margin-bottom: 24px;
+}
+
+.narrow-copy {
+  width: min(342px, 100%);
+  margin: 0 auto 24px;
+}
+
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--olive);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.pill-button:hover {
+  background: var(--olive-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.rsvp-form-section {
+  background: var(--cream);
+}
+
+.rsvp-form-section h2 {
+  margin-bottom: 18px;
+}
+
+.form-card,
+.info-card {
+  border: 1px solid rgba(217, 214, 204, .75);
+  border-radius: 12px;
+  background: var(--cream-light);
+}
+
+.form-card {
+  margin-bottom: 18px;
+  padding: 17px 18px;
+}
+
+.field-title {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.form-intro {
+  margin-bottom: 18px;
+}
+
+.form-control {
+  min-height: 46px;
+  border-color: var(--line);
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+textarea.form-control {
+  min-height: 86px;
+  resize: vertical;
+}
+
+.form-control:focus {
+  border-color: var(--olive);
+  background: var(--cream);
+  box-shadow: 0 0 0 .2rem rgba(131, 135, 70, .15);
+}
+
+.choice {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.choice + .choice {
+  margin-top: 4px;
+}
+
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-bottom: 10px;
+}
+
+.choice-row .choice + .choice {
+  margin-top: 0;
+}
+
+.choice-row-wrap {
+  max-width: 590px;
+}
+
+.choice input {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  accent-color: var(--olive);
+}
+
+.field-note {
+  margin: 2px 0 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.form-status {
+  min-height: 24px;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.access-note {
+  padding: 24px;
+}
+
+.access-note strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.program-section {
+  background: #fff;
+}
+
+.program-icon {
+  position: relative;
+  width: 61px;
+  height: 77px;
+}
+
+.program-icon img,
+.gifts-icon img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.program-section h2,
+.practical-section h2,
+.gifts-section h2,
+.rules-section h2 {
+  margin-bottom: 24px;
+}
+
+.info-grid {
+  margin-top: 18px;
+}
+
+.info-card {
+  height: 100%;
+  min-height: 81px;
+  padding: 17px 18px;
+}
+
+.info-card h3 {
+  margin: 0 0 6px;
+  color: var(--olive);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.info-card p {
+  line-height: 22px;
+}
+
+.practical-section {
+  background: var(--cream-deep);
+}
+
+.info-illustration {
+  width: 78px;
+  height: 94px;
+}
+
+.gifts-section {
+  background: var(--sage-light);
+}
+
+.gifts-icon {
+  position: relative;
+  width: 71px;
+  height: 95px;
+}
+
+.emphasis {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31px;
+}
+
+.flowers-title {
+  margin: 18px 0 12px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.rules-section {
+  background: var(--olive-dark);
+  color: #fff;
+}
+
+.rules-illustration {
+  width: 64px;
+  height: 78px;
+}
+
+.rules-section .section-kicker {
+  color: var(--olive-light);
+}
+
+.rules-list {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.rules-list li {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.rules-more {
+  color: var(--sage-light);
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.footer {
+  background: var(--olive);
+  color: #fff;
+}
+
+.footer-names {
+  margin-bottom: 24px;
+}
+
+.footer-date {
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.footer-joke {
+  color: var(--ink);
+}
+
+.botanical {
+  position: absolute;
+  z-index: 0;
+  width: 335px;
+  height: 489px;
+  pointer-events: none;
+  opacity: .9;
+}
+
+.botanical-rsvp {
+  top: -112px;
+  left: -13px;
+  transform: rotate(180deg) scaleY(-1);
+}
+
+.botanical-gifts {
+  right: -100px;
+  bottom: -180px;
+}
+
+@media (max-width: 991.98px) {
+  .section-pad {
+    padding: 52px 0;
+  }
+
+  .container {
+    --bs-gutter-x: 24px;
+  }
+
+  .hero {
+    padding-top: 68px;
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  .hero-chateau {
+    width: min(300px, 100%);
+    height: 94px;
+    margin: 18px auto;
+  }
+
+  .hero-copy {
+    max-width: 342px;
+    margin: 0 auto;
+  }
+
+  .date-badge {
+    margin-top: 24px;
+  }
+
+  .venue {
+    margin-top: 24px;
+  }
+
+  .text-link {
+    margin-top: 18px;
+  }
+
+  .rsvp-intro .section-kicker,
+  .rsvp-intro h2,
+  .section-kicker {
+    margin-bottom: 18px;
+  }
+
+  .rsvp-form-section .container,
+  .program-section .container,
+  .practical-section .container,
+  .gifts-section .container,
+  .rules-section .container {
+    --bs-gutter-x: 24px;
+  }
+
+  .form-card {
+    margin-bottom: 14px;
+  }
+
+  .choice-row {
+    gap: 8px 16px;
+  }
+
+  .info-grid {
+    --bs-gutter-y: 18px;
+  }
+
+  .botanical {
+    width: 238px;
+    height: 348px;
+  }
+
+  .botanical-rsvp {
+    top: -28px;
+    left: -115px;
+    opacity: .38;
+  }
+
+  .botanical-gifts {
+    right: -100px;
+    bottom: -140px;
+    opacity: .38;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  .choice-row {
+    flex-direction: column;
+  }
+
+  .choice-row-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .choice-row-wrap .choice {
+    min-width: 0;
+  }
+
+  .pill-button {
+    max-width: 100%;
+  }
+}
