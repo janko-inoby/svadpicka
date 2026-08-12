@@ -26,8 +26,8 @@ body {
   background: var(--cream);
   color: var(--ink);
   font-family: "Urbanist", sans-serif;
-  font-size: 15px;
-  line-height: 1.47;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 a {
@@ -87,9 +87,9 @@ p {
 
 .hero-copy {
   color: var(--olive);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 15px;
+  line-height: 18px;
 }
 
 .date-badge {
@@ -98,26 +98,32 @@ p {
   padding: 10px 18px;
   border-radius: 999px;
   background: var(--sage-light);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 19px;
+  line-height: 22px;
+}
+
+@media (min-width: 992px) {
+  .date-badge {
+    width: 100%;
+  }
 }
 
 .venue {
   margin-top: 32px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 15px;
+  line-height: 18px;
 }
 
 .text-link {
   display: inline-block;
   margin-top: 24px;
   color: var(--olive);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 21px;
   text-decoration: none;
 }
 
@@ -141,10 +147,10 @@ p {
 .section-kicker {
   margin-bottom: 24px;
   color: var(--olive);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 14px;
-  letter-spacing: 1px;
+  line-height: 17px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
@@ -159,6 +165,8 @@ p {
 .narrow-copy {
   width: min(342px, 100%);
   margin: 0 auto 24px;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .pill-button {
@@ -170,9 +178,9 @@ p {
   border-radius: 999px;
   background: var(--olive);
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 21px;
   text-align: center;
   text-decoration: none;
   transition: background-color .2s ease, transform .2s ease;
@@ -182,6 +190,11 @@ p {
   background: var(--olive-dark);
   color: #fff;
   transform: translateY(-1px);
+}
+
+.rsvp-intro .pill-button,
+#rsvp-form > .pill-button {
+  width: 100%;
 }
 
 .rsvp-form-section {
@@ -209,13 +222,15 @@ p {
   width: 100%;
   margin: 0 0 10px;
   color: var(--ink);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 23px;
 }
 
 .form-intro {
   margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .form-control {
@@ -224,7 +239,8 @@ p {
   border-radius: 8px;
   background: var(--cream);
   color: var(--ink);
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 22px;
   padding: 10px 12px;
 }
 
@@ -244,8 +260,8 @@ textarea.form-control {
   align-items: flex-start;
   gap: 8px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 22px;
   cursor: pointer;
 }
 
@@ -279,8 +295,8 @@ textarea.form-control {
 .field-note {
   margin: 2px 0 10px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .form-status {
@@ -337,13 +353,14 @@ textarea.form-control {
 .info-card h3 {
   margin: 0 0 6px;
   color: var(--olive);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 19px;
+  line-height: 22px;
 }
 
 .info-card p {
-  line-height: 22px;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .practical-section {
@@ -408,8 +425,8 @@ textarea.form-control {
 
 .rules-more {
   color: var(--sage-light);
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .footer {
@@ -423,13 +440,15 @@ textarea.form-control {
 
 .footer-date {
   margin-bottom: 24px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 19px;
+  line-height: 22px;
 }
 
 .footer-joke {
   color: var(--ink);
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .botanical {
@@ -459,6 +478,7 @@ textarea.form-control {
 
   .container {
     --bs-gutter-x: 24px;
+    width: calc(100% - 24px);
   }
 
   .hero {
@@ -519,6 +539,10 @@ textarea.form-control {
     --bs-gutter-y: 18px;
   }
 
+  .info-card {
+    min-height: 0;
+  }
+
   .botanical {
     width: 238px;
     height: 348px;
@@ -540,10 +564,6 @@ textarea.form-control {
 @media (max-width: 420px) {
   h1 {
     font-size: 64px;
-  }
-
-  .choice-row {
-    flex-direction: column;
   }
 
   .choice-row-wrap {
