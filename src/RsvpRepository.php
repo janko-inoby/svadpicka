@@ -25,15 +25,15 @@ final class RsvpRepository
         $this->tab = Config::get('GOOGLE_SHEET_TAB');
     }
 
-    /** @return array{row:int,guest_id:string,token:string,meno:string,priezvisko:string,oslovenie:string,aktivny:bool}|null */
+    /** @return array{row:int,guest_id:string,token:string,meno:string,priezvisko:string,aktivny:bool}|null */
     public function findActiveGuest(string $token): ?array
     {
         $rows = $this->sheets->spreadsheets_values
-            ->get($this->spreadsheetId, "'{$this->tab}'!A2:G1000")
+            ->get($this->spreadsheetId, "'{$this->tab}'!A2:E1000")
             ->getValues() ?? [];
 
         foreach ($rows as $index => $row) {
-            if (($row[1] ?? '') !== $token || !$this->toBool($row[5] ?? false)) {
+            if (($row[1] ?? '') !== $token || !$this->toBool($row[4] ?? false)) {
                 continue;
             }
 
@@ -43,7 +43,6 @@ final class RsvpRepository
                 'token' => (string) $row[1],
                 'meno' => (string) ($row[2] ?? ''),
                 'priezvisko' => (string) ($row[3] ?? ''),
-                'oslovenie' => (string) ($row[4] ?? ''),
                 'aktivny' => true,
             ];
         }
@@ -87,7 +86,7 @@ final class RsvpRepository
 
         $this->sheets->spreadsheets_values->update(
             $this->spreadsheetId,
-            "'{$this->tab}'!H{$row}:AE{$row}",
+            "'{$this->tab}'!F{$row}:AC{$row}",
             new ValueRange(['values' => $values]),
             ['valueInputOption' => 'USER_ENTERED']
         );
@@ -98,4 +97,3 @@ final class RsvpRepository
         return $value === true || in_array(strtolower((string) $value), ['true', '1', 'áno', 'ano'], true);
     }
 }
-
