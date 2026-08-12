@@ -66,7 +66,7 @@ function renderHero(bool $rsvpPage): void
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/css/app.css?v=4" rel="stylesheet">
+  <link href="/assets/css/app.css?v=5" rel="stylesheet">
 </head>
 <body>
 <main>
@@ -209,7 +209,6 @@ function renderHero(bool $rsvpPage): void
       <div class="container position-relative">
         <div class="row">
           <div class="col-12 col-lg-8 offset-lg-2">
-            <div class="layered-icon gifts-icon" aria-hidden="true"><img src="/assets/images/gifts-1.svg" alt=""><img src="/assets/images/gifts-2.svg" alt=""></div>
             <p class="section-kicker">DARY A KVETY</p>
             <h2>Máme všetko.</h2>
             <h3 class="emphasis">Okrem peňazí.</h3>
@@ -225,7 +224,6 @@ function renderHero(bool $rsvpPage): void
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8 offset-lg-2">
-            <img class="section-illustration rules-illustration" src="/assets/images/rules.svg" alt="">
             <p class="section-kicker">SVADOBNÉ DESATORO</p>
             <h2>Pravidlá, ktoré sa nevyjednávajú.</h2>
             <ol class="rules-list">

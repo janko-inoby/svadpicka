@@ -103,12 +103,6 @@ p {
   line-height: 22px;
 }
 
-@media (min-width: 992px) {
-  .date-badge {
-    width: 100%;
-  }
-}
-
 .venue {
   margin-top: 32px;
   color: var(--muted);
@@ -324,8 +318,7 @@ textarea.form-control {
   height: 77px;
 }
 
-.program-icon img,
-.gifts-icon img {
+.program-icon img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -376,12 +369,6 @@ textarea.form-control {
   background: var(--sage-light);
 }
 
-.gifts-icon {
-  position: relative;
-  width: 71px;
-  height: 95px;
-}
-
 .emphasis {
   margin: 0 0 16px;
   font-size: 24px;
@@ -399,11 +386,6 @@ textarea.form-control {
 .rules-section {
   background: var(--olive-dark);
   color: #fff;
-}
-
-.rules-illustration {
-  width: 64px;
-  height: 78px;
 }
 
 .rules-section .section-kicker {
