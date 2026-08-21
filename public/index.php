@@ -194,8 +194,8 @@ function renderHero(bool $rsvpPage): void
             <p class="section-kicker">NECH VIEŠ ČO A AKO</p>
             <h2>ne/Dôležité info</h2>
             <div class="row g-4 info-grid">
-              <div class="col-12 col-lg-6"><article class="info-card"><h3>Oblečenie</h3><p>Dámy, biela je rezervovaná!<br>A, áno, aj slonová kosť, béžová či krémová ... proste všetky kamuflované odtiene bielej.</p><p>A, páni... vieme, že tenisky, rifle a mikina sú najpohodlnejšie, ale idete na svadbu, nie na sobotný nákup do Lidla.</p></article></div>
-              <div class="col-12 col-lg-6"><article class="info-card"><h3>Parkovanie</h3><p>Bezplatne priamo v areáli. <a href="https://maps.app.goo.gl/HD7EsFpcubHGF2XN9" target="_blank" rel="noopener">Pozrieť mapu ↗</a></p></article></div>
+              <div class="col-12 col-lg-6"><article class="info-card"><h3>Oblečenie</h3><p>Dámy, biela je rezervovaná!<br>A, áno, aj slonová kosť, béžová či krémová ... proste všetky kamuflované odtiene bielej.<br><br>A, páni... vieme, že tenisky, rifle a mikina sú najpohodlnejšie, ale idete na svadbu, nie na sobotný nákup do Lidla.</p></article></div>
+              <div class="col-12 col-lg-6"><article class="info-card"><h3>Parkovanie</h3><p>Bezplatne priamo v areáli.</p></article></div>
               <div class="col-12 col-lg-6"><article class="info-card"><h3>Odvoz</h3><p>Bude šofér, číslo pribudne.</p></article></div>
               <div class="col-12 col-lg-6"><article class="info-card"><h3>Ubytovanie</h3><p>Priamo v Château Révay · 60 € / osoba / noc. Potrebujeme o záujme vedieť.</p></article></div>
               <div class="col-12 col-lg-6"><article class="info-card"><h3>Kontakty</h3><p>Pred svadbou: My – kontakt hádam máš.<br>V deň svadby: Veronika · <a href="tel:+421908458424">0908 458 424</a></p></article></div>
