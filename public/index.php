@@ -79,7 +79,7 @@ function renderHero(bool $rsvpPage): void
           <div class="col-12 col-lg-8 offset-lg-2">
             <p class="section-kicker">NAJDÔLEŽITEJŠIA OTÁZKA</p>
             <h2>Prídeš?</h2>
-            <p class="narrow-copy">Potvrď nám účasť do <strong>16. 8. 2026</strong>. Každý hosť vypĺňa formulár <strong>samostatne</strong> — áno, aj ten, čo vždy odpovedá za všetkých.</p>
+            <p class="narrow-copy">Potvrď nám účasť do <strong>23. 8. 2026</strong>. Každý hosť vypĺňa formulár <strong>samostatne</strong> — áno, aj ten, čo vždy odpovedá za všetkých.</p>
             <a class="pill-button" href="#rsvp">VYPLNIŤ&nbsp; ↓</a>
           </div>
         </div>
@@ -194,7 +194,7 @@ function renderHero(bool $rsvpPage): void
             <p class="section-kicker">NECH VIEŠ ČO A AKO</p>
             <h2>ne/Dôležité info</h2>
             <div class="row g-4 info-grid">
-              <div class="col-12 col-lg-6"><article class="info-card"><h3>Oblečenie</h3><p>Obleč sa pohodlne a možno aj pekne :)<br>Tenisky a šušťáková súprava ale nie.</p></article></div>
+              <div class="col-12 col-lg-6"><article class="info-card"><h3>Oblečenie</h3><p>Dámy, biela je rezervovaná!<br>A, áno, aj slonová kosť, béžová či krémová ... proste všetky kamuflované odtiene bielej.</p><p>A, páni... vieme, že tenisky, rifle a mikina sú najpohodlnejšie, ale idete na svadbu, nie na sobotný nákup do Lidla.</p></article></div>
               <div class="col-12 col-lg-6"><article class="info-card"><h3>Parkovanie</h3><p>Bezplatne priamo v areáli. <a href="https://maps.app.goo.gl/HD7EsFpcubHGF2XN9" target="_blank" rel="noopener">Pozrieť mapu ↗</a></p></article></div>
               <div class="col-12 col-lg-6"><article class="info-card"><h3>Odvoz</h3><p>Bude šofér, číslo pribudne.</p></article></div>
               <div class="col-12 col-lg-6"><article class="info-card"><h3>Ubytovanie</h3><p>Priamo v Château Révay · 60 € / osoba / noc. Potrebujeme o záujme vedieť.</p></article></div>
@@ -233,7 +233,7 @@ function renderHero(bool $rsvpPage): void
               <li value="7">Pozor na pesničkového démona!</li>
               <li value="10">Každý sa pokúsi odísť po vlastných.</li>
             </ol>
-            <p class="rules-more">Ďalšie pravidlá doplníme, keď nás napadnú ďalšie zákazy.</p>
+            <p class="rules-more">Ďalšie pravidlá doplníme, keď nám napadnú ďalšie zákazy.</p>
           </div>
         </div>
       </div>
